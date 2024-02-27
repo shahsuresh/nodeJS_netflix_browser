@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Movie</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #form {
+        width: 500px;
+        margin: 10px auto;
+        padding: 15px;
+        background: #f7b7b7;
+        border-radius: 7px;
+      }
+      #form label {
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 1px;
+      }
+      #form input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 2px;
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        font-size: 1.3rem;
+      }
+      #submit {
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 2px;
+        border-radius: 7px;
+        background-color: #f98f8f;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form">
+      <form action="http://localhost:4001/movie/add" method="post">
+        <label for="name"
+          >Movie Name:<input type="text" name="name" required /></label
+        ><br />
+        <label for="length"
+          >Length:<input
+            type="number"
+            name="length"
+            max="200"
+            required /></label
+        ><br />
+        <label for="actorName"
+          >Actor Name:<input type="text" name="actorName" required /></label
+        ><br />
+        <label for="rating"
+          >Rating:<input type="text" name="rating" max="10" required /></label
+        ><br />
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </div>
+  </body>
+</html>
